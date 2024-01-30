@@ -19,7 +19,7 @@
       let res=await fetch(url)
       let resArray=await res.json();
 
-      document.getElementById('status').innerText = resArray('status');
+      document.getElementById('status').innerText = resArray['status'];
     }
 
   </script>
