@@ -8,8 +8,20 @@
 <body>
 
 
+  <button onclick="getData()">Get Data</button>
+  <h1 id="status"></h1>
+
+
   <script>
-    let url = "https://crud.teamrabbil.com/api/v1/ReadProduct";
+
+    async function getData(){
+      let url = "https://crud.teamrabbil.com/api/v1/ReadProduct";
+      let res=await fetch(url)
+      let resArray=await res.json();
+
+      document.getElementById('status').innerText = resArray('status');
+    }
+
   </script>
   
 </body>
